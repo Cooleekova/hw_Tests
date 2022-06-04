@@ -70,7 +70,7 @@ def command_a_docs(docs, shelf, shelf_num, doc_type, doc_number, doc_name):
     new_doc = dict(type=doc_type, number=doc_number, name=doc_name)
     docs.append(new_doc)
     if shelf_num not in shelf.keys():
-        print("Полки с таким номером нет!")
+        return "Полки с таким номером нет!"
     else:
         for k, v in shelf.items():
             if k == shelf_num:
@@ -79,5 +79,13 @@ def command_a_docs(docs, shelf, shelf_num, doc_type, doc_number, doc_name):
 
 
 pprint(command_a_docs(documents, directories, '3', 'passport', '1234', 'Tatiana'))
+
+# def command_p(docs):
+#     num = input('введите номер документа ')
+#     for doc in docs:
+#       if num == doc["number"]:
+#         return doc["name"]
+#         elif num != doc["number"]:
+#      return "\nДокумента с таким номером нет"
 
 
